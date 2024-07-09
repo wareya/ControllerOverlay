@@ -13,6 +13,7 @@ License: CC0. See `license.txt`.
 - Buttons can be moved around on an 8px grid (allows using controllers with weird face buttons layouts)
 - Transparent background
 - Press space to switch from white to light grey icons to use on white backgrounds
+- Press number keys to switch between different controllers if multiple are connected
 
 ## Missing features
 

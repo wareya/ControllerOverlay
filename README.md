@@ -12,6 +12,7 @@ License: CC0. See `license.txt`.
 - Controller-agnostic legends
 - Buttons can be moved around on an 8px grid (allows using controllers with weird face buttons layouts)
 - Transparent background
+- Press space to switch from white to light grey icons to use on white backgrounds
 
 ## Missing features
 

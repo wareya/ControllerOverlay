@@ -1,0 +1,132 @@
+[gd_scene load_steps=10 format=3 uid="uid://wl7kjiyxpxjt"]
+
+[ext_resource type="Texture2D" uid="uid://bq5lqdef4ak2s" path="res://shaded-light/shadedLight03.png" id="1_cxesx"]
+[ext_resource type="Script" path="res://main.gd" id="1_pjedi"]
+[ext_resource type="Texture2D" uid="uid://42er8k7gep5s" path="res://shaded-light/barblank.png" id="2_34vdp"]
+[ext_resource type="Texture2D" uid="uid://d1muv7oicj1sp" path="res://shaded-light/shadedLight42.png" id="2_iw6kx"]
+[ext_resource type="Texture2D" uid="uid://b7kec4ha81ifc" path="res://shaded-light/shadedLight43.png" id="3_65ty0"]
+[ext_resource type="Texture2D" uid="uid://dgns0x50g5jqe" path="res://shaded-light/shadedLight01.png" id="4_cp32n"]
+[ext_resource type="Texture2D" uid="uid://b7tprwukmqyyo" path="res://shaded-light/blank.png" id="5_3c2mx"]
+[ext_resource type="Texture2D" uid="uid://bfrm060ysnyeg" path="res://shaded-light/shadedLight12.png" id="6_k0c76"]
+[ext_resource type="Script" path="res://Draggable.gd" id="7_y3g5s"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_pjedi")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="ShadeL" type="Sprite2D" parent="."]
+modulate = Color(0.301961, 0.301961, 0.301961, 1)
+position = Vector2(-128, 130)
+texture = ExtResource("4_cp32n")
+
+[node name="ShadeR" type="Sprite2D" parent="."]
+modulate = Color(0.301961, 0.301961, 0.301961, 1)
+position = Vector2(128, 130)
+texture = ExtResource("4_cp32n")
+
+[node name="U" type="Sprite2D" parent="."]
+position = Vector2(-288, -64)
+texture = ExtResource("1_cxesx")
+script = ExtResource("7_y3g5s")
+
+[node name="R" type="Sprite2D" parent="."]
+position = Vector2(-224, 0)
+rotation = 1.5708
+texture = ExtResource("1_cxesx")
+script = ExtResource("7_y3g5s")
+
+[node name="D" type="Sprite2D" parent="."]
+position = Vector2(-288, 64)
+rotation = 3.14159
+texture = ExtResource("1_cxesx")
+script = ExtResource("7_y3g5s")
+
+[node name="L" type="Sprite2D" parent="."]
+position = Vector2(-360, 0)
+rotation = 4.71239
+texture = ExtResource("1_cxesx")
+script = ExtResource("7_y3g5s")
+
+[node name="START" type="Sprite2D" parent="."]
+position = Vector2(95, 32)
+texture = ExtResource("2_iw6kx")
+script = ExtResource("7_y3g5s")
+
+[node name="SELECT" type="Sprite2D" parent="."]
+position = Vector2(-97, 32)
+texture = ExtResource("3_65ty0")
+script = ExtResource("7_y3g5s")
+
+[node name="SL" type="Sprite2D" parent="."]
+position = Vector2(-128, 130)
+texture = ExtResource("4_cp32n")
+script = ExtResource("7_y3g5s")
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="SL"]
+remote_path = NodePath("../../ShadeL")
+update_rotation = false
+update_scale = false
+
+[node name="SR" type="Sprite2D" parent="."]
+position = Vector2(128, 130)
+texture = ExtResource("4_cp32n")
+script = ExtResource("7_y3g5s")
+
+[node name="RemoteTransform2D2" type="RemoteTransform2D" parent="SR"]
+remote_path = NodePath("../../ShadeR")
+update_rotation = false
+update_scale = false
+
+[node name="MH" type="Sprite2D" parent="."]
+position = Vector2(-4.03897e-28, -64)
+scale = Vector2(1.16364, 1.33333)
+texture = ExtResource("2_34vdp")
+script = ExtResource("7_y3g5s")
+
+[node name="ML" type="Sprite2D" parent="."]
+position = Vector2(0, 128)
+texture = ExtResource("6_k0c76")
+script = ExtResource("7_y3g5s")
+
+[node name="FU" type="Sprite2D" parent="."]
+position = Vector2(288, -72)
+texture = ExtResource("5_3c2mx")
+script = ExtResource("7_y3g5s")
+
+[node name="FR" type="Sprite2D" parent="."]
+position = Vector2(360, 0)
+texture = ExtResource("5_3c2mx")
+script = ExtResource("7_y3g5s")
+
+[node name="FD" type="Sprite2D" parent="."]
+position = Vector2(288, 72)
+texture = ExtResource("5_3c2mx")
+script = ExtResource("7_y3g5s")
+
+[node name="FL" type="Sprite2D" parent="."]
+position = Vector2(216, 0)
+texture = ExtResource("5_3c2mx")
+script = ExtResource("7_y3g5s")
+
+[node name="L1" type="Sprite2D" parent="."]
+position = Vector2(-288, -144)
+texture = ExtResource("2_34vdp")
+script = ExtResource("7_y3g5s")
+
+[node name="L2" type="Sprite2D" parent="."]
+position = Vector2(-288, -224)
+scale = Vector2(1, 1.66667)
+texture = ExtResource("2_34vdp")
+script = ExtResource("7_y3g5s")
+
+[node name="R1" type="Sprite2D" parent="."]
+position = Vector2(288, -144)
+texture = ExtResource("2_34vdp")
+script = ExtResource("7_y3g5s")
+
+[node name="R2" type="Sprite2D" parent="."]
+position = Vector2(288, -224)
+scale = Vector2(1, 1.66667)
+texture = ExtResource("2_34vdp")
+script = ExtResource("7_y3g5s")

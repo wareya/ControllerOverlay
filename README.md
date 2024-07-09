@@ -1,6 +1,6 @@
 # Controller Overlay
 
-Ultra simple transparent controller overlay made in Godot 4. For streamers etc.
+Ultra simple transparent controller overlay made in Godot 4. For streamers etc. Uses [Kenney's Onscreen Controls](https://kenney.nl/assets/onscreen-controls).
 
 https://github.com/wareya/ControllerOverlay/assets/585488/68f7d665-b35b-4e60-bd95-5816561463f0
 
